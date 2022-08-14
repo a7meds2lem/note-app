@@ -1,0 +1,50 @@
+#home{
+    /* background-image: url(../../assets/); */
+    background-size: cover;
+    background-position: 100% 100%;
+    background-color: #888a8a;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+.note{
+    position: relative;
+    min-height: 160px;
+    /* width: 100%; */
+    background-color: #FFFFFF ;
+    border-radius: 10%;
+}
+.note p{
+    display: inline-block !important;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.new{
+        background-color: #CCFFCC ;
+        min-height: 250px;
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+}
+.newNote{
+    width: 55%;
+    height: 70%;
+    /* background-color: blue; */
+    border-radius: 50%;
+    border: 3px dashed blue;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+.newNote i{
+    color: aquamarine;
+    font-size: 30px;
+}
+.deleteIconm ,.editIcon{
+    font-size: 20px;
+}
+.showNote{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

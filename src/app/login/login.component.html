@@ -1,0 +1,47 @@
+<section id="signIn">
+  <div class="container">
+    <!-- {{loginForm.get('first_name')?.getError('minlength') | json}} -->
+       
+    <form class="form w-75" [formGroup]="loginForm" (ngSubmit)="loginFormFun(loginForm)">
+      <div class="row text-center text-white mb-3"> 
+          <h1>login</h1>
+          <p *ngIf="errorMessage" class="alert alert-danger" >{{errorMessage}}</p>
+      </div>
+    
+      <div class="row">
+          <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <input type="text" [class.is-valid]="loginForm.get('email')?.status=='VALID' " placeholder=" Enter First E-mail" class="form-control mb-3" formControlName="email">
+          <div *ngIf="loginForm.get('email')?.errors &&  loginForm.get('email')?.touched">
+              <p class="alert alert-danger py-1" *ngIf="loginForm.get('email')?.getError('required') "> E-mail is Required </p>
+              <p class="alert alert-danger py-1" *ngIf="loginForm.get('email')?.getError('pattern')" >Enter Valid E-mail </p>
+          </div>
+  
+  
+          <div class="inputBox w-100  ">
+       <input type="password" [class.is-valid]="loginForm.get('password')?.status=='VALID' " placeholder=" Enter Password" class="passInput form-control mb-3" formControlName="password">
+         
+              </div>
+  
+          <div class="alert alert-danger" *ngIf="loginForm.get('password')?.errors &&  loginForm.get('password')?.touched">
+              <p> Password is Required </p>
+              <ul>
+                  <li>password must contain at least eight characters</li>
+                  <li>at least one number</li>
+                  <li>and both lower and uppercase letters</li>
+                  <li>and special characters</li>
+              </ul>
+          </div>
+          <h3 *ngIf="successMessage" >{{successMessage}}</h3>
+          <button [disabled]="loginForm.invalid" class="btn btn-info w-100"  >
+              <span *ngIf="isLoading" >Waiting.....</span>
+              <span *ngIf="!isLoading" >Log In</span>
+          </button>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+      
+    </form>
+</div>
+
+</section>

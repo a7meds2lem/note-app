@@ -1,0 +1,18 @@
+.navbar{
+    background-color: #343A40 !important;
+}
+.navbar a{
+    color: #fff;
+}
+.dropdown-menu a{
+    color: #000;
+}
+button , .navIcon{
+    color: #fff !important;
+}
+button{
+    background-color: #fff !important;
+}
+.cursor-pointer{
+    cursor: pointer;
+}

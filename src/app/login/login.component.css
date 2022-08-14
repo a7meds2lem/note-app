@@ -1,0 +1,23 @@
+.inputBox{
+    position: relative;
+    display: inline-block;
+ }
+ .eye{
+     /* display: inline; */
+     position: absolute;
+ 
+     left: 95%;
+     top: 10%;
+ }
+ #signIn{
+    min-height: 100vh;
+    background-color: #343A40;
+    /* padding-top: 200px; */
+    overflow-x: hidden;
+ }
+.form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%) !important;
+}
